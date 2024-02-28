@@ -24,6 +24,7 @@ import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
