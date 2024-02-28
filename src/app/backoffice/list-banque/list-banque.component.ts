@@ -26,3 +26,6 @@ export class ListBanqueComponent {
     this.router.navigate(['/dashboard/addBanque']);
   }
 }
+
+
+

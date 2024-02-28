@@ -8,8 +8,6 @@ import { Router } from '@angular/router';
   styleUrl: './add-banque.component.css'
 })
 export class AddBanqueComponent {
-
-
   constructor(private service: BanqueService, private router: Router) { }
 
 
@@ -21,3 +19,5 @@ export class AddBanqueComponent {
     });
   }
 }
+
+
