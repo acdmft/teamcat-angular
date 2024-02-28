@@ -18,6 +18,7 @@ import { TokenInterceptorService } from '../services/token-interceptor.service';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -30,6 +31,7 @@ import { TokenInterceptorService } from '../services/token-interceptor.service';
     LogoutComponent,
     ListActualiteComponent,
     AddActualiteComponent,
+    
   ],
   imports: [
     CommonModule,

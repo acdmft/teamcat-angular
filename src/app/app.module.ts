@@ -17,7 +17,8 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
   ],
   providers: [
     provideClientHydration(),
-    //{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
+    
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]
 })
