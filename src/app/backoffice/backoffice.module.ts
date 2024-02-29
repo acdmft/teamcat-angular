@@ -18,6 +18,9 @@ import { TokenInterceptorService } from '../services/token-interceptor.service';
 import { ListPrestationComponent } from './list-prestation/list-prestation.component';
 import { AddPrestationComponent } from './add-prestation/add-prestation.component';
 import { UpdatePrestationComponent } from './update-prestation/update-prestation.component';
+import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
+
+
 
 
 
@@ -36,6 +39,9 @@ import { UpdatePrestationComponent } from './update-prestation/update-prestation
     ListPrestationComponent,
     AddPrestationComponent,
     UpdatePrestationComponent,
+    UpdatebanqueComponent,
+   
+    
   ],
   imports: [
     CommonModule,
