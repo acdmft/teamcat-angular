@@ -23,4 +23,11 @@ export class ListPrestationComponent implements OnInit {
     )
   }
 
+  deletePrestation(id: number) {
+    this.service.removePrestation(id).subscribe(
+      (response: any) => this.refreshListPrestations()
+    );
+    
+  }
+
 }

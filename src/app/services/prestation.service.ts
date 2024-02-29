@@ -16,4 +16,8 @@ export class PrestationService {
   getAllPrestations() {
     return this.Http.get(environment.baseUrl+"prestations/list");
   }
+
+  removePrestation(id: number){
+    return this.Http.delete(environment.baseUrl + "prestations/delete/" + id) 
+  }
 }
