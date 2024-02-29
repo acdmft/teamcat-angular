@@ -12,6 +12,7 @@ import { AuthGuardService } from '../services/auth-guard.service';
 import { ListActualiteComponent } from './list-actualite/list-actualite.component';
 import { AddActualiteComponent } from './add-actualite/add-actualite.component';
 import { ListPrestationComponent } from './list-prestation/list-prestation.component';
+import { AddPrestationComponent } from './add-prestation/add-prestation.component';
 
 const routes: Routes = [
   {
@@ -71,7 +72,12 @@ const routes: Routes = [
         path: 'listPrestation',
         component: ListPrestationComponent,
         canActivate: [AuthGuardService]
-      }
+      },
+      {
+        path: 'addPrestation',
+        component: AddPrestationComponent,
+        canActivate: [AuthGuardService]
+      },
     ]
   }
 ];

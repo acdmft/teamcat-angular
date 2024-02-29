@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from '../services/token-interceptor.service';
 import { ListPrestationComponent } from './list-prestation/list-prestation.component';
+import { AddPrestationComponent } from './add-prestation/add-prestation.component';
 
 
 
@@ -32,6 +33,7 @@ import { ListPrestationComponent } from './list-prestation/list-prestation.compo
     ListActualiteComponent,
     AddActualiteComponent,
     ListPrestationComponent,
+    AddPrestationComponent,
   ],
   imports: [
     CommonModule,
