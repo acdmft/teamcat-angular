@@ -11,12 +11,6 @@ export class AddBanqueComponent {
   constructor(private service: BanqueService, private router: Router) { }
 
 
-<<<<<<< HEAD
-=======
-  constructor(private service: BanqueService, private router: Router) { }
-
-
->>>>>>> 2d953dd (crud banque)
   persistBanque(banque:any){
     this.service.createBanque(banque).subscribe(
       data => {

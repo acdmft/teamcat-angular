@@ -11,6 +11,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from '../services/auth-guard.service';
 import { ListActualiteComponent } from './list-actualite/list-actualite.component';
 import { AddActualiteComponent } from './add-actualite/add-actualite.component';
+import { ListPrestationComponent } from './list-prestation/list-prestation.component';
+import { AddPrestationComponent } from './add-prestation/add-prestation.component';
+import { UpdatePrestationComponent } from './update-prestation/update-prestation.component';
 import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
 
 const routes: Routes = [
@@ -70,7 +73,23 @@ const routes: Routes = [
         path: 'addActualite',
         component: AddActualiteComponent,
         canActivate: [AuthGuardService]
-      }
+      },
+      // PRESTATIONS 
+      {
+        path: 'listPrestation',
+        component: ListPrestationComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'addPrestation',
+        component: AddPrestationComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'updatePrestation/:id',
+        component: UpdatePrestationComponent,
+        canActivate: [AuthGuardService]
+      },
     ]
   }
 ];

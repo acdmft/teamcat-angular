@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="card o-hidden border-0 shadow-lg my-12">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="p-5">
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-12">
+               Ajouter une nouvelle prestation
+              </h1>
+            </div>
+            <form
+              #data="ngForm"
+              (ngSubmit)="addPrestation(data.value)"
+              class="user"
+            >
+              <div class="form-group row">
+                <div class="col-12">
+                    <label for="libelle">
+
+                        Libelle
+                    </label>
+                  <input
+                    type="text"
+                    ngModel
+                    name="libelle"
+                    class="form-control form-control-user"
+                    id="libelle"
+                    placeholder="libelle"
+                  />
+                </div>
+                <div class="col-12">
+                    <label for="titre">Titre de prestation</label>
+                  <input
+                    type="text"
+                    ngModel
+                    name="title"
+                    class="form-control form-control-user"
+                    id="titre"
+                    placeholder="titre de prestation"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-12">
+                    <label for="prestDescr">
+                        Description
+                    </label>
+                  <textarea
+                    type="texarea"
+                    ngModel
+                    name="description"
+                    class="form-control"
+                    id="prestDescr"
+                    placeholder="Description"
+                  ></textarea>
+                </div>
+              </div>
+
+              <input
+                type="submit"
+                class="btn btn-primary btn-user btn-block"
+                value="Créer prestation"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
