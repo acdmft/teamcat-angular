@@ -28,7 +28,7 @@ export class UpdatePrestationComponent implements OnInit {
   }
 
   updatePrestation(prestation: any) {
-    this.service.updatePrestation(prestation).subscribe(
+    this.service.updatePrestation(this.prestationId, prestation).subscribe(
       (response) => this.router.navigate(["/dashboard/listPrestation"])
     )
   }

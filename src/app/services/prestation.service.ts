@@ -25,7 +25,7 @@ export class PrestationService {
     return this.Http.delete(environment.baseUrl + "prestations/delete/" + id) 
   }
 
-  updatePrestation(prestation: any) {
-    return this.Http.put(environment.baseUrl+"prestations/update/" + prestation.id, prestation);
+  updatePrestation(id: number, prestation: any) {
+    return this.Http.put(environment.baseUrl+"prestations/update/" + id, prestation);
   }
 }
