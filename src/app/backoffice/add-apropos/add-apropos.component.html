@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="card o-hidden border-0 shadow-lg my-12">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
+
+        <div class="col-lg-12">
+          <div class="p-5">
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-12">Créer un nouveau à-propos !</h1>
+            </div>
+            <form #data="ngForm"  (ngSubmit)="persistApropos(data.value)" class="user">
+              <div class="form-group row">
+                <div class="col-12">
+                  Téléphone <input type="text" ngModel name="telephone" class="form-control form-control-user" id="#"
+                                    placeholder="+33 01 02 03 04 05">
+                </div>
+                <div class="col-12">
+                  Email <input type="text" ngModel name="email" class="form-control form-control-user" id="#"
+                                       placeholder="example@gmail.com">
+                </div>
+                <div class="col-12">
+                  Adresse <input type="text" ngModel name="adresse" class="form-control form-control-user" id="#"
+                                       placeholder="100 Av. Albert 1er, 92500 Rueil-Malmaison">
+                </div>
+                <div class="col-12">
+                  Description <input type="text" ngModel name="description" class="form-control form-control-user" id="#"
+                                        placeholder="À propos de la description... ">
+                </div>
+                <div class="col-12">
+                  Logo Image <input type="text" ngModel name="logo" class="form-control form-control-user" id="#"
+                                    placeholder="/path/of/logo.png">
+                </div>
+              </div>
+
+
+              <input type="submit" class="btn btn-primary btn-user btn-block" value="Créer À-propos" />
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

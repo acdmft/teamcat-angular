@@ -11,6 +11,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from '../services/auth-guard.service';
 import { ListActualiteComponent } from './list-actualite/list-actualite.component';
 import { AddActualiteComponent } from './add-actualite/add-actualite.component';
+import { ListAproposComponent } from './list-apropos/list-apropos.component';
+import { AddAproposComponent } from './add-apropos/add-apropos.component';
 
 const routes: Routes = [
   {
@@ -58,11 +60,20 @@ const routes: Routes = [
         path: 'listActualite',
         component: ListActualiteComponent,
         canActivate: [AuthGuardService]
-      }
-      ,
+      },
       {
         path: 'addActualite',
         component: AddActualiteComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'listApropos',
+        component: ListAproposComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'addApropos',
+        component: AddAproposComponent,
         canActivate: [AuthGuardService]
       }
     ]
