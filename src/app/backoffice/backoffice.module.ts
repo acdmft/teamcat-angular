@@ -44,7 +44,7 @@ import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
   ],
   providers: [
 
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
+   // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
   ],
 })
 export class BackofficeModule { }
