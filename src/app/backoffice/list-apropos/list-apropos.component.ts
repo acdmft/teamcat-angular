@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { AproposService } from '../../services/apropos.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-apropos',
-  templateUrl: './apropos.component.html',
-  styleUrl: './apropos.component.css'
+  selector: 'app-list-apropos',
+  templateUrl: './list-apropos.component.html',
+  styleUrl: './list-apropos.component.css'
 })
-export class AproposComponent {
-  constructor(private service: AproposService) { }
-
+export class ListAproposComponent {
+  constructor(private service: AproposService, private router: Router) { }
   apropos:any;
   ngOnInit() {
     this.refreshListComptes();
@@ -20,5 +20,9 @@ export class AproposComponent {
         console.log(this.apropos);
       }
     );
+  }
+
+  addApropos(){
+    this.router.navigate(['/dashboard/addApropos']);
   }
 }
