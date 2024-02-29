@@ -15,6 +15,8 @@ import { AddActualiteComponent } from './add-actualite/add-actualite.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from '../services/token-interceptor.service';
+import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
+
 
 
 
@@ -31,6 +33,8 @@ import { TokenInterceptorService } from '../services/token-interceptor.service';
     LogoutComponent,
     ListActualiteComponent,
     AddActualiteComponent,
+    UpdatebanqueComponent,
+   
     
   ],
   imports: [

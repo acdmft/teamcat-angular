@@ -11,6 +11,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from '../services/auth-guard.service';
 import { ListActualiteComponent } from './list-actualite/list-actualite.component';
 import { AddActualiteComponent } from './add-actualite/add-actualite.component';
+import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
       {
         path: 'addBanque',
         component: AddBanqueComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'updateBanque/:id',
+        component: UpdatebanqueComponent,
         canActivate: [AuthGuardService]
       },
       {
