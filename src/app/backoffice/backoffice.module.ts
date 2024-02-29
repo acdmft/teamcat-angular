@@ -17,6 +17,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from '../services/token-interceptor.service';
 import { ListPrestationComponent } from './list-prestation/list-prestation.component';
 import { AddPrestationComponent } from './add-prestation/add-prestation.component';
+import { UpdatePrestationComponent } from './update-prestation/update-prestation.component';
 
 
 
@@ -34,6 +35,7 @@ import { AddPrestationComponent } from './add-prestation/add-prestation.componen
     AddActualiteComponent,
     ListPrestationComponent,
     AddPrestationComponent,
+    UpdatePrestationComponent,
   ],
   imports: [
     CommonModule,

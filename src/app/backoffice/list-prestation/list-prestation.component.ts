@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrestationService } from '../../services/prestation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-prestation',
@@ -7,7 +8,7 @@ import { PrestationService } from '../../services/prestation.service';
   styleUrl: './list-prestation.component.css'
 })
 export class ListPrestationComponent implements OnInit {
-  constructor(private service: PrestationService) {}
+  constructor(private service: PrestationService, private router: Router) {}
 
   prestations: any;
   ngOnInit() {
@@ -27,7 +28,10 @@ export class ListPrestationComponent implements OnInit {
     this.service.removePrestation(id).subscribe(
       (response: any) => this.refreshListPrestations()
     );
+  }
     
+  updatePrestation(id: number) {
+    this.router.navigate(["/dashboard/updatePrestation", id])
   }
 
 }

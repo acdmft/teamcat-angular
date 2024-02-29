@@ -17,7 +17,15 @@ export class PrestationService {
     return this.Http.get(environment.baseUrl+"prestations/list");
   }
 
+  getByIdPrestation(id: number) {
+    return this.Http.get(environment.baseUrl + "prestations/update/" + id);
+  }
+
   removePrestation(id: number){
     return this.Http.delete(environment.baseUrl + "prestations/delete/" + id) 
+  }
+
+  updatePrestation(prestation: any) {
+    return this.Http.put(environment.baseUrl+"prestations/update/" + prestation.id, prestation);
   }
 }
