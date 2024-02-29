@@ -17,6 +17,9 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from '../services/token-interceptor.service';
 import { ListAproposComponent } from './list-apropos/list-apropos.component';
 import { AddAproposComponent } from './add-apropos/add-apropos.component';
+import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
+
+
 
 
 
@@ -35,6 +38,10 @@ import { AddAproposComponent } from './add-apropos/add-apropos.component';
     AddActualiteComponent,
     ListAproposComponent,
     AddAproposComponent,
+
+    UpdatebanqueComponent,
+   
+
     
   ],
   imports: [

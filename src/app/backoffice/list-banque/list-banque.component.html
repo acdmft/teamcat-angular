@@ -23,6 +23,7 @@
                 <th>NOM</th>
                 <th>ADRESSE</th>
                 <th>CAPITAL</th>
+                <th>Mettre à jour</th>
                 <th>Supprimer</th>
               </tr>
             </thead>
@@ -32,6 +33,7 @@
                 <th>NOM</th>
                 <th>ADRESSE</th>
                 <th>CAPITAL</th>
+                <th>Mettre à jour</th>
                 <th>Supprimer</th>
               </tr>
             </tfoot>
@@ -41,7 +43,8 @@
                 <td>{{banque.nom}}</td>
                 <td>{{banque.adresse}}</td>
                 <td>{{banque.capital}}</td>
-                <td>Supprimer</td>
+                <td><button class="btn btn-warning" (click)="updateBanque(banque)">Modifier</button></td>
+                <td><button class="btn btn-danger" (click)="deleteBanque(banque)">Supprimer</button></td>
               </tr>
   
             </tbody>
@@ -51,5 +54,5 @@
     </div>
   
   </div>
-  <!-- /.container-fluid -->
+
   
