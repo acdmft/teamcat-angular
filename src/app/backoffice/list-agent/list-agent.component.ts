@@ -23,5 +23,7 @@ export class ListAgentComponent implements OnInit {
     )
   }
 
-  addAgent(){}
+  addAgent() {
+    this.router.navigate(["/dashboard/addAgent"])
+  }
 }

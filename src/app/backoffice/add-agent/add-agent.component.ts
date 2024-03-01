@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AddAgentComponent {
 
+  addAgent(form: any) {
+    
+  }
 }
