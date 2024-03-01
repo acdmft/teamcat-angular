@@ -45,7 +45,7 @@
 
               <div class="form-group row">
                 <div class="col-12">
-                    <label for="prestDescr">
+                    <label for="capital">
                        Capital
                     </label>
                   <textarea
@@ -58,6 +58,19 @@
                   ></textarea>
                 </div>
               </div>
+              <div class="col-12">
+                <label for="titre">logo</label>
+              <input
+                type="file"
+                [(ngModel)]="imageFile"
+                name="imageFile"
+                class="form-control form-control-user"
+                id="imageFile"
+                placeholder="logo"
+              />
+            </div>
+          
+
 
               <input
                 type="submit"

@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BanqueService } from '../../services/banque.service';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-list-banque',
   templateUrl: './list-banque.component.html',
   styleUrl: './list-banque.component.css'
 })
-export class ListBanqueComponent  implements OnInit{
-  constructor(private banqueService: BanqueService, private router: Router) {
-  }
+export class ListBanqueComponent {
+  public urlUpload = environment.urlUploadImage;
+  constructor(private service: BanqueService, private router: Router) { }
   banques:any;
   ngOnInit() {
-    this.refreshData();
+    this.refreshListBanques();
   }
-  refreshData() {
-    this.banqueService.getAllBanques().subscribe(
+  refreshListBanques() {
+    this.service.getAllBanques().subscribe(
       (response:any) => {
         this.banques = response;
-        console.log(this.banques);
+        //console.log(this.banques);
       }
     );
   }
@@ -28,25 +29,11 @@ export class ListBanqueComponent  implements OnInit{
   }
 
   deleteBanque(banque: any) {
-   
-
-    this.banqueService.deleteBanque(banque).subscribe(
-
-      response => {
-        alert("Suppresion avec succès");
-        this.refreshData();
-      },
-
-      error => console.log(error + "Problème dans l'api")
-    );
+    this.service.deleteBanque(banque.id).subscribe(response => {
+      //console.log(response);
+      this.refreshListBanques();
+    })
   }
 
-  updateBanque(banque:any){
-    //console.log("updateBanque")
-
-   this.router.navigate(['dashboard/updateBanque',banque.id]);
-  }
+  updateBanque(banque:any){}
 }
-
-
-

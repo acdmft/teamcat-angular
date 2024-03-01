@@ -1,14 +1,10 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Banques</h1>
-  <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-    For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official
-      DataTables documentation</a>.</p>
+ <!-- Page Heading -->
+ <h1 class="h3 mb-2 text-gray-800">Gestion des Banques</h1>
 
-      Pour Ajouter une banque clique ici <button class="btn btn-primary" (click)="addBanque()">Ajouter</button>
-      <br/><br/>
-
+ <p>Cette interface vous permetra de créer une nouvelle banque dans la base de données. Ce travail intitulé GestiBanque s'inscrit dans le cadre du projet du Cursus Java 2024</p>
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -24,6 +20,7 @@
               <th>Capital</th>
               <th>Adresse</th>
               <th>Logo</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </thead>
@@ -34,6 +31,7 @@
               <th>Capital</th>
               <th>Adresse</th>
               <th>Logo</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </tfoot>
@@ -43,8 +41,12 @@
               <td>{{banque.nom}}</td>
               <td>{{banque.capital}}</td>
               <td>{{banque.adresse}}</td>
-              <td>{{banque.logo}}</td>
-              <td>Supprimer</td>
+              <td>
+                <img src="{{urlUpload}}/{{banque.logo}}" width="20%"/>
+                <a href="{{urlUpload}}/{{banque.logo}}" target="_blank">Télécharger</a>
+              </td>
+              <td><a class="btn btn-warning" (click)="updateBanque(banque)">Mise à jour</a></td>
+              <td><a class="btn btn-danger" (click)="deleteBanque(banque)">Supprimer</a></td>
             </tr>
 
           </tbody>
@@ -55,4 +57,3 @@
 
 </div>
 <!-- /.container-fluid -->
-

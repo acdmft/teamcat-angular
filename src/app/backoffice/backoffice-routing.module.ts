@@ -14,7 +14,7 @@ import { AddActualiteComponent } from './add-actualite/add-actualite.component';
 import { ListPrestationComponent } from './list-prestation/list-prestation.component';
 import { AddPrestationComponent } from './add-prestation/add-prestation.component';
 import { UpdatePrestationComponent } from './update-prestation/update-prestation.component';
-import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
+//import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
 
 const routes: Routes = [
   {
@@ -32,11 +32,7 @@ const routes: Routes = [
         component: AddBanqueComponent,
         canActivate: [AuthGuardService]
       },
-      {
-        path: 'updateBanque/:id',
-        component: UpdatebanqueComponent,
-        canActivate: [AuthGuardService]
-      },
+     
       {
         path: 'listCompte',
         component: ListCompteComponent,
