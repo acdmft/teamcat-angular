@@ -1,1 +1,63 @@
-<p>list-agent works!</p>
+<div class="container-fluid">
+  
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Liste des agents</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>username</th>
+                <th>email</th>
+                <th>nom</th>
+                <th>prenom</th>
+                <th>telephone</th>
+                <th>matricule</th>
+                <th>dateCreation</th>
+                <th>photo</th>
+                <th>Supprimer</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>username</th>
+                <th>email</th>
+                <th>nom</th>
+                <th>prenom</th>
+                <th>telephone</th>
+                <th>matricule</th>
+                <th>dateCreation</th>
+                <th>photo</th>
+                <th>Supprimer</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr *ngFor="let agent of  agents">
+                <td>{{agent.id}}</td>
+                <td>{{agent.username}}</td>
+                <td>{{agent.email}}</td>
+                <td>{{agent.nom}}</td>
+                <td>{{agent.prenom}}</td>
+                <td>{{agent.telephone}}</td>
+                <td>{{agent.matricule}}</td>
+                <td>{{agent.dateCreation}}</td>
+                <td>{{agent.photo}}</td>
+                <td><button class="btn btn-danger">Supprimer</button></td>
+              </tr>
+  
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <!-- /.container-fluid -->
+  
+  
+
