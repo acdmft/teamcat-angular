@@ -18,6 +18,7 @@ import { TokenInterceptorService } from '../services/token-interceptor.service';
 import { ListPrestationComponent } from './list-prestation/list-prestation.component';
 import { AddPrestationComponent } from './add-prestation/add-prestation.component';
 import { UpdatePrestationComponent } from './update-prestation/update-prestation.component';
+import { UpdateBanqueComponent } from './update-banque/update-banque.component';
 
 
 
@@ -35,7 +36,8 @@ import { UpdatePrestationComponent } from './update-prestation/update-prestation
     AddActualiteComponent,
     ListPrestationComponent,
     AddPrestationComponent,
-    UpdatePrestationComponent,   
+    UpdatePrestationComponent,
+    UpdateBanqueComponent,   
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,7 @@ import { UpdatePrestationComponent } from './update-prestation/update-prestation
   ],
   providers: [
 
-   // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
   ],
 })
 export class BackofficeModule { }

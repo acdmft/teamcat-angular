@@ -35,5 +35,7 @@ export class ListBanqueComponent {
     })
   }
 
-  updateBanque(banque:any){}
+  updateBanque(id:number){
+    this.router.navigate(["/dashboard/updateBanque", id])
+  }
 }

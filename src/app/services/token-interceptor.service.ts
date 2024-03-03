@@ -36,17 +36,7 @@ export class TokenInterceptorService implements HttpInterceptor {
       return next.handle(req);
     }
 
-    /*return next.handle(req)
-        .pipe(
-           catchError((error: HttpErrorResponse) => {
-                // Catching Error Stage
-                if (error && error.status === 401) {
-                    console.log("ERROR 401 UNAUTHORIZED") // in case of an error response the error message is displayed
-                }
-                const err = error.error.message || error.statusText;
-                return throwError(error); // any further errors are returned to frontend
-           })
-        );*/
+    
    }
 
 }

@@ -20,4 +20,14 @@ export class BanqueService {
   deleteBanque(idBanque: any) {
     return this.Http.delete(environment.baseUrl + "banques/" + idBanque)
   }
+
+  getByIdBanque(id: number) {
+    return this.Http.get(environment.baseUrl + "banques/" + id);
+  }
+
+  updateBanque(id: number, banque: any) {
+    return this.Http.put(environment.baseUrl+"banques/" + id, banque);
+  }
+   
+  
 }
