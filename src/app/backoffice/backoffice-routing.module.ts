@@ -100,7 +100,8 @@ const routes: Routes = [
         path: 'addApropos',
         component: AddAproposComponent,
         canActivate: [AuthGuardService]
-      }
+      },
+     
     ]
   }
 ];

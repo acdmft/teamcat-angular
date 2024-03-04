@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./frontoffice/frontoffice.module').then(m => m.FrontofficeModule)
   },
   {
+    path: 'client',
+    loadChildren: () => import('./client/client.module').then(m => m.ClientModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

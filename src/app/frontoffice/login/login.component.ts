@@ -24,13 +24,29 @@ export class LoginComponent {
     this.loginservice.authenticate(this.username, this.password).subscribe(
       (data:any) => {
         this.router.navigate(['/dashboard'])
-        this.invalidLogin = false
-       // console.log(data)
+                this.invalidLogin = false
+        //console.log(data.roles[0])
+        if(data.roles[0]==='SUPER_ADMIN'){
+                this.router.navigate(['/dashboard'])
+                this.invalidLogin = false
+        }
+        else if(data.roles[0]==='AGENT')
+        {
+          this.router.navigate(['/dashboardAgent'])
+                this.invalidLogin = false
+               
+        }
+        else if(data.roles[0]==='CLIENT'){
+          this.router.navigate(['/dashboardClient'])
+                this.invalidLogin = false
+        }
+
       },
       (error:any) => {
         this.invalidLogin = true
         console.log(error)
       }
-    );
+    )
   }
 }
+  

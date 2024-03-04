@@ -27,6 +27,7 @@ import { AddAproposComponent } from './add-apropos/add-apropos.component';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -46,6 +47,7 @@ import { AddAproposComponent } from './add-apropos/add-apropos.component';
    
     ListAproposComponent,
     AddAproposComponent,
+    
     
   ],
   imports: [
