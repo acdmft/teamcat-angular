@@ -11,9 +11,9 @@ export class AproposComponent {
 
   apropos:any;
   ngOnInit() {
-    this.refreshListComptes();
+    this.refreshListApropos();
   }
-  refreshListComptes() {
+  refreshListApropos() {
     this.service.getAllApropos().subscribe(
       (response:any) => {
         this.apropos = response;

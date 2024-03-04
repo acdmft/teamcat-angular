@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,5 +15,9 @@ export class ActualiteService {
 
   getAllActualites() {
     return this.Http.get(environment.baseUrl+"actualites");
+  }
+
+  deleteActualite(id: any) {
+    return this.Http.delete(environment.baseUrl + "actualites/" + id)
   }
 }

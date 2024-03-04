@@ -1,5 +1,9 @@
 <div class="container">
 
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Gestion de l'à-propos</h1>
+
+  <p>Cette interface vous permetra de créer un nouveau à-proposé dans la base de données. Ce travail intitulé GestiBanque s'inscrit dans le cadre du projet du Cursus Java 2024</p>
   <div class="card o-hidden border-0 shadow-lg my-12">
     <div class="card-body p-0">
       <!-- Nested Row within Card Body -->
@@ -10,7 +14,7 @@
             <div class="text-center">
               <h1 class="h4 text-gray-900 mb-12">Créer un nouveau à-propos !</h1>
             </div>
-            <form #data="ngForm"  (ngSubmit)="persistApropos(data.value)" class="user">
+            <form #data="ngForm"  (ngSubmit)="persistApropos(data.value)" class="user" enctype="multipart/form-data">
               <div class="form-group row">
                 <div class="col-12">
                   Téléphone <input type="text" ngModel name="telephone" class="form-control form-control-user" id="#"

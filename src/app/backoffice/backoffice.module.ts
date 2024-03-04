@@ -17,6 +17,10 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from '../services/token-interceptor.service';
 import { ListAproposComponent } from './list-apropos/list-apropos.component';
 import { AddAproposComponent } from './add-apropos/add-apropos.component';
+import { ListPrestationComponent } from './list-prestation/list-prestation.component';
+import { AddPrestationComponent } from './add-prestation/add-prestation.component';
+import { UpdatePrestationComponent } from './update-prestation/update-prestation.component';
+import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
 
 
 
@@ -35,6 +39,10 @@ import { AddAproposComponent } from './add-apropos/add-apropos.component';
     AddActualiteComponent,
     ListAproposComponent,
     AddAproposComponent,
+    ListPrestationComponent,
+    AddPrestationComponent,
+    UpdatePrestationComponent,
+    UpdatebanqueComponent,
     
   ],
   imports: [
@@ -44,7 +52,7 @@ import { AddAproposComponent } from './add-apropos/add-apropos.component';
   ],
   providers: [
 
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
+   // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
   ],
 })
 export class BackofficeModule { }

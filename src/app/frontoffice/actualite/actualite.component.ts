@@ -11,9 +11,9 @@ export class ActualiteComponent implements OnInit{
 
   actualites:any;
   ngOnInit() {
-    this.refreshListComptes();
+    this.refreshListActualites();
   }
-  refreshListComptes() {
+  refreshListActualites() {
     this.service.getAllActualites().subscribe(
       (response:any) => {
         this.actualites = response;

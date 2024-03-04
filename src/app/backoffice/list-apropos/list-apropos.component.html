@@ -25,6 +25,7 @@
               <th>Adresse</th>
               <th>Description</th>
               <th>LogoImage</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </thead>
@@ -36,6 +37,7 @@
               <th>Adresse</th>
               <th>Description</th>
               <th>Logo Image</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </tfoot>
@@ -47,7 +49,8 @@
               <td>{{apropo.adresse}}</td>
               <td>{{apropo.description}}</td>
               <td>{{apropo.logoImage}}</td>
-              <td>Supprimer</td>
+              <td><a class="btn btn-warning" (click)="updateApropos(apropos)">Mise à jour</a></td>
+              <td><a class="btn btn-danger" (click)="deleteApropos(apropos)">Supprimer</a></td>
             </tr>
 
           </tbody>
