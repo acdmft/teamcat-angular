@@ -8,16 +8,34 @@ import { Router } from '@angular/router';
   styleUrl: './add-banque.component.css'
 })
 export class AddBanqueComponent {
+
+
   constructor(private service: BanqueService, private router: Router) { }
+
+  selectedFile!: File;
 
 
   persistBanque(banque:any){
-    this.service.createBanque(banque).subscribe(
+
+    let banqueTemp = new FormData();
+    banqueTemp.append('imageFile', this.selectedFile,this.selectedFile.name);
+    banqueTemp.append('nom', banque.nom);
+    banqueTemp.append('adresse', banque.adresse);
+    banqueTemp.append('capital', banque.capital);
+
+
+    this.service.createBanque(banqueTemp).subscribe(
       data => {
-        this.router.navigate(["/dashboard/listBanque"])
         console.log(data);
+        this.router.navigate(["/dashboard/listBanque"])
+
     });
   }
+
+    //Gets called when the user selects an image
+    public onFileChanged(event:any) {
+      //Select File
+      this.selectedFile = event.target.files[0];
+      //console.log(this.selectedFile);
+    }
 }
-
-
