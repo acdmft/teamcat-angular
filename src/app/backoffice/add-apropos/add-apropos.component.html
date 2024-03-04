@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 
   <!-- Page Heading -->
   <h1 class="h3 mb-2 text-gray-800">Gestion de l'à-propos</h1>
@@ -33,8 +33,8 @@
                                         placeholder="À propos de la description... ">
                 </div>
                 <div class="col-12">
-                  Logo Image <input type="text" ngModel name="logo" class="form-control form-control-user" id="#"
-                                    placeholder="/path/of/logo.png">
+                  Logo Image <input type="file" (change)="onFileChanged($event)" ngModel name="logo" 
+                               class="form-control form-control-user" id="#" placeholder="Logo Image">
                 </div>
               </div>
 

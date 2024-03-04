@@ -29,8 +29,9 @@ export class ListAproposComponent {
   }
 
   deleteApropos(apropos: any) {
-    this.service.deleteApropos(apropos.id).subscribe(response => {
-      //console.log(response);
+    // console.log("coucou", apropos.id);
+    this.service.deleteApropos(apropos).subscribe(response => {
+      // console.log("apropos", apropos);
       this.refreshListApropos();
     })
   }

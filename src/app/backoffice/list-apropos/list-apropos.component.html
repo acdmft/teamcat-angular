@@ -2,9 +2,7 @@
 
   <!-- Page Heading -->
   <h1 class="h3 mb-2 text-gray-800">À propos de nous</h1>
-  <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-    For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official
-      DataTables documentation</a>.</p>
+  <p class="mb-4">GestiBanque backoffice</p>
 
       Pour Ajouter un à-propos clique ici <button class="btn btn-primary" (click)="addApropos()">Ajouter</button>
       <br/><br/>
@@ -48,9 +46,12 @@
               <td>{{apropo.email}}</td>
               <td>{{apropo.adresse}}</td>
               <td>{{apropo.description}}</td>
-              <td>{{apropo.logoImage}}</td>
-              <td><a class="btn btn-warning" (click)="updateApropos(apropos)">Mise à jour</a></td>
-              <td><a class="btn btn-danger" (click)="deleteApropos(apropos)">Supprimer</a></td>
+              <td>
+                <img src="{{urlUpload}}/{{apropo.logoImage}}" width="20%"/>
+                <a href="{{urlUpload}}/{{apropo.logoImage}}" target="_blank">Télécharger</a>
+              </td>
+              <td><a class="btn btn-warning" (click)="updateApropos(apropo)">Mise à jour</a></td>
+              <td><a class="btn btn-danger" (click)="deleteApropos(apropo)">Supprimer</a></td>
             </tr>
 
           </tbody>

@@ -29,7 +29,7 @@ export class ListActualiteComponent {
   }
 
   deleteActualite(actualite: any) {
-    this.service.deleteActualite(actualite.id).subscribe(response => {
+    this.service.deleteActualite(actualite).subscribe(response => {
       //console.log(response);
       this.refreshListActualites();
     })

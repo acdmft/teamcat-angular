@@ -16,14 +16,16 @@ export class AddAproposComponent {
   persistApropos(apropos:any){
     let aproposTemp = new FormData();
     aproposTemp.append('logoImage', this.selectedFile, this.selectedFile.name);
-    aproposTemp.append('titre', apropos.titre);
-    aproposTemp.append('dateCreation', apropos.dateCreation);
+    aproposTemp.append('telephone', apropos.telephone);
+    aproposTemp.append('email', apropos.email);
+    aproposTemp.append('adresse', apropos.adresse);
     aproposTemp.append('description', apropos.description);
 
     this.service.createApropos(aproposTemp).subscribe(
       data => {
-        this.router.navigate(["/dashboard/listApropos"])
+        // console.log('coucou', aproposTemp);
         console.log(data);
+        this.router.navigate(["/dashboard/listApropos"])
       });
   }
 

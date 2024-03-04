@@ -11,19 +11,18 @@
     <div class="row">
       <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
         <figure class="circle-bg">
-          <img src="/assets/frontoffice/images/img_2.jpg" alt="About us picture" class="img-fluid">
+          <!-- <img src="/assets/frontoffice/images/img_2.jpg" alt="About us picture" class="img-fluid"> -->
+          <ng-container *ngIf="apropos && apropos.length > 0">
+            <img [src]="urlUpload + '/' + apropos[0].logoImage" alt="About us picture" class="img-fluid">
+          </ng-container>
         </figure>
       </div>
       <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
 
-        <h3 class="text-black mb-4">We Solve Your Financial Problem</h3>
-
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-          blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-          ocean.</p>
-
-        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
-          paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+        <h3 class="text-black mb-4">Téléphone : {{apropos[0].telephone}}</h3>
+        <h3 class="text-black mb-4">Email : {{apropos[0].email}}</h3>
+        <h3 class="text-black mb-4">Adresse : {{apropos[0].adresse}}</h3>
+        <h3 class="text-black mb-4">Description : {{apropos[0].description}}</h3>
 
       </div>
     </div>

@@ -17,7 +17,16 @@ export class AproposService {
     return this.Http.get(environment.baseUrl+"apropos");
   }
 
-  deleteApropos(id: any) {
-    return this.Http.delete(environment.baseUrl + "apropos/" + id)
+  deleteApropos(apropos: any) {
+    return this.Http.delete(environment.baseUrl + "apropos/" + apropos.id)
+  }
+
+  getByIdApropos(id: number) {
+    return this.Http.get(environment.baseUrl + "apropos/" + id);
+  }
+
+
+  updateApropos(apropos: any) {
+    return this.Http.put(environment.baseUrl+"apropos/" +apropos.id, apropos);
   }
 }

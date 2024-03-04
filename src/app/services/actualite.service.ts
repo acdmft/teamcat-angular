@@ -17,7 +17,7 @@ export class ActualiteService {
     return this.Http.get(environment.baseUrl+"actualites");
   }
 
-  deleteActualite(id: any) {
-    return this.Http.delete(environment.baseUrl + "actualites/" + id)
+  deleteActualite(actualite: any) {
+    return this.Http.delete(environment.baseUrl + "actualites/" + actualite.id)
   }
 }

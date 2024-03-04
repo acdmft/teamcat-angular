@@ -17,7 +17,6 @@ export class AddActualiteComponent {
     let actualiteTemp = new FormData();
     actualiteTemp.append('logoImage', this.selectedFile, this.selectedFile.name);
     actualiteTemp.append('titre', actualite.titre);
-    actualiteTemp.append('dateCreation', actualite.dateCreation);
     actualiteTemp.append('description', actualite.description);
 
     this.service.createActualite(actualiteTemp).subscribe(

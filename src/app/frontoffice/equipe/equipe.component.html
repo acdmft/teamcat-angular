@@ -20,11 +20,14 @@
               <li><a href="#"><span class="icon-linkedin"></span></a></li>
               <li><a href="#"><span class="icon-instagram"></span></a></li>
             </ul>
-            <img src="/assets/frontoffice/images/person_1.jpg" alt="Image" class="img-fluid">
+            <!-- <img src="/assets/frontoffice/images/person_1.jpg" alt="Image" class="img-fluid"> -->
+            <ng-container *ngIf="apropos && apropos.length > 3">
+              <img [src]="urlUpload + '/' + apropos[1].logoImage" alt="team member one" class="img-fluid">
+            </ng-container>
           </figure>
           <div class="p-3">
-            <h3>Kaiara Spencer</h3>
-            <span class="position">Accountant</span>
+            <h3>{{apropos[1].adresse}}</h3>
+            <span class="position">{{apropos[1].description}}</span>
           </div>
         </div>
       </div>
@@ -38,11 +41,14 @@
               <li><a href="#"><span class="icon-linkedin"></span></a></li>
               <li><a href="#"><span class="icon-instagram"></span></a></li>
             </ul>
-            <img src="/assets/frontoffice/images/person_2.jpg" alt="Image" class="img-fluid">
+            <!-- <img src="/assets/frontoffice/images/person_2.jpg" alt="Image" class="img-fluid"> -->
+            <ng-container *ngIf="apropos && apropos.length > 3">
+              <img [src]="urlUpload + '/' + apropos[2].logoImage" alt="team member two" class="img-fluid">
+            </ng-container>
           </figure>
           <div class="p-3">
-            <h3>Dave Simpson</h3>
-            <span class="position">Bank Teller</span>
+            <h3>{{apropos[2].adresse}}</h3>
+            <span class="position">{{apropos[2].description}}</span>
           </div>
         </div>
       </div>
@@ -56,11 +62,14 @@
               <li><a href="#"><span class="icon-linkedin"></span></a></li>
               <li><a href="#"><span class="icon-instagram"></span></a></li>
             </ul>
-            <img src="/assets/frontoffice/images/person_3.jpg" alt="Image" class="img-fluid">
+            <!-- <img src="/assets/frontoffice/images/person_3.jpg" alt="Image" class="img-fluid"> -->
+            <ng-container *ngIf="apropos && apropos.length > 3">
+              <img [src]="urlUpload + '/' + apropos[3].logoImage" alt="team member three" class="img-fluid">
+            </ng-container>
           </figure>
           <div class="p-3">
-            <h3>Ben Thompson</h3>
-            <span class="position">Bank Teller</span>
+            <h3>{{apropos[3].adresse}}</h3>
+            <span class="position">{{apropos[3].description}}</span>
           </div>
         </div>
       </div>
