@@ -39,4 +39,9 @@ export class AuthenticationService {
     sessionStorage.removeItem('jwtToken')
     sessionStorage.removeItem('email')
   }
+  isUserClient(){
+    let user = sessionStorage.getItem('roles')
+    console.log('isUserClient ', user)
+    return user === 'CLIENT';
+  }
 }
