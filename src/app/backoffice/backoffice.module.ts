@@ -21,6 +21,9 @@ import { UpdatePrestationComponent } from './update-prestation/update-prestation
 import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
 
 
+import { ListAproposComponent } from './list-apropos/list-apropos.component';
+import { AddAproposComponent } from './add-apropos/add-apropos.component';
+
 
 
 
@@ -41,6 +44,8 @@ import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
     UpdatePrestationComponent,
     UpdatebanqueComponent,
    
+    ListAproposComponent,
+    AddAproposComponent,
     
   ],
   imports: [

@@ -15,6 +15,8 @@ import { ListPrestationComponent } from './list-prestation/list-prestation.compo
 import { AddPrestationComponent } from './add-prestation/add-prestation.component';
 import { UpdatePrestationComponent } from './update-prestation/update-prestation.component';
 import { UpdatebanqueComponent } from './updatebanque/updatebanque.component';
+import { ListAproposComponent } from './list-apropos/list-apropos.component';
+import { AddAproposComponent } from './add-apropos/add-apropos.component';
 
 const routes: Routes = [
   {
@@ -67,8 +69,7 @@ const routes: Routes = [
         path: 'listActualite',
         component: ListActualiteComponent,
         canActivate: [AuthGuardService]
-      }
-      ,
+      },
       {
         path: 'addActualite',
         component: AddActualiteComponent,
@@ -90,6 +91,16 @@ const routes: Routes = [
         component: UpdatePrestationComponent,
         canActivate: [AuthGuardService]
       },
+      {
+        path: 'listApropos',
+        component: ListAproposComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'addApropos',
+        component: AddAproposComponent,
+        canActivate: [AuthGuardService]
+      }
     ]
   }
 ];
