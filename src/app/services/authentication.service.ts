@@ -21,16 +21,19 @@ export class AuthenticationService {
            sessionStorage.setItem('jwtToken', data.accessToken);
            sessionStorage.setItem('username', data.username);
            sessionStorage.setItem('email', data.email);
+           sessionStorage.setItem("roles", data.roles)
            userData = data;
            //console.log(userData)
            return userData;
         }
       )
     );
+
     return userData;
   }
   isUserLoggedIn() {
     let user = sessionStorage.getItem('username')
+    console.log('isUserLoggedIn', user);
     //console.log(!(user === null))
     return !(user === null)
   }
@@ -38,5 +41,10 @@ export class AuthenticationService {
     sessionStorage.removeItem('username')
     sessionStorage.removeItem('jwtToken')
     sessionStorage.removeItem('email')
+  }
+  isUserAgent() {
+    let user = sessionStorage.getItem('roles')
+    console.log('isUserAgent ', user)
+    return user === 'AGENT';
   }
 }

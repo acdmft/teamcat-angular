@@ -5,13 +5,17 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardService implements CanActivate  {
+export class AgentAuthGuardService implements CanActivate  {
 
   constructor(private router: Router,
     private authService: AuthenticationService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    this.authService.isUserAgent();
+    if (!this.authService.isUserAgent()) {
+        this.router.navigate(['/home'])
+        return false;
+      }
+
     if (this.authService.isUserLoggedIn())
       return true;
 

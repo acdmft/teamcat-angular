@@ -11,9 +11,13 @@ const routes: Routes = [
     loadChildren: () => import('./frontoffice/frontoffice.module').then(m => m.FrontofficeModule)
   },
   {
+    path: 'dashboard-agent',
+    loadChildren: () => import('./backoffice-agent/backoffice-agent.module').then(m => m.BackofficeAgentModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
-  }
+  },
 ];
 
 @NgModule({

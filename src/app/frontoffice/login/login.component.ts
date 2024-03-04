@@ -23,6 +23,11 @@ export class LoginComponent {
 
     this.loginservice.authenticate(this.username, this.password).subscribe(
       (data:any) => {
+        let isAgent = this.loginservice.isUserAgent();
+        if (isAgent) {
+          this.router.navigate(['/dashboard-agent'])
+          return;
+        }
         this.router.navigate(['/dashboard'])
         this.invalidLogin = false
        // console.log(data)
