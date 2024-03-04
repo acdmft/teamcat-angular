@@ -21,4 +21,9 @@ export class UserService {
   getAllAgents() {
     return this.Http.get(environment.baseUrl + "users/agents");
   }
+
+  getUserName() {
+    
+    return sessionStorage.getItem('username');
+  }
 }
